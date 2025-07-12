@@ -1,5 +1,6 @@
 -- print('hello from knichian_preset')
 require('knichian_preset.remap')
 
-vim.wo.number = true
+vim.cmd('set number')
+vim.cmd('set cursorline')
 
