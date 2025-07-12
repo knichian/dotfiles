@@ -3,21 +3,22 @@
 
 - Neovim:
 
-    - [ ] set numbers
-    - [ ] configure lead key as SPACE
+    - [x] set numbers
+    - [x] configure lead key as <SPACE>
 
-    - [ ] install packer.nvim plugin mannager
+    - [ ] install lazy.nvim as a plugin manager
     - [ ] add shortcut pluggin for commenting line based on current language
     - [ ] add telescope for fuzzy-finding
+    - [ ] add tree-sitter for syntax-highlighting 
+
+    - [ ] configure current-line highlighting
 
     - [ ] setup some kind of auto-indent
-    - [ ] set emacs bindings to INSERT mode
+    - [ ] setup Readline keybinding (rsi.vim)
 
     - [ ] auto-close brackets like symbols
     - [ ] auto-close html tags
-    - [ ] snippets
-
-    - [ ] org mode (?)
+    - [ ] code-snippets
 
     - [ ] add syntax-highliting with TreeSitter
     - [ ] configure out buffers
@@ -27,6 +28,8 @@
 
     - [ ] setup notification system
     - [ ] add LSP for C++
+
+    - [ ] org mode (?)
 
 --- 
 
