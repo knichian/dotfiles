@@ -82,20 +82,20 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-completions
-    # zsh-autocomplete # Heavy-AF!
     zsh-history-substring-search
+    # zsh-autocomplete # Heavy-AF!
     sudo
-    # dnf
-    fzf
-    ufw
-    colored-man-pages
+    dnf
+    # fzf
+    # ufw
+    # colored-man-pages
     battery
     # git-lfs
-    python
-    tailscale
+    # python
+    # tailscale
     # conda
     # conda-env
-    docker
+    # docker
     # docker-compose
     # lol
 )
