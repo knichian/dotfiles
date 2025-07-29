@@ -86,16 +86,16 @@ plugins=(
     # zsh-autocomplete # Heavy-AF!
     sudo
     dnf
-    # fzf
-    # ufw
-    # colored-man-pages
+    fzf
+    ufw
+    colored-man-pages
     battery
-    # git-lfs
-    # python
+    git-lfs
+    python
     # tailscale
     # conda
     # conda-env
-    # docker
+    docker
     # docker-compose
     # lol
 )
@@ -133,6 +133,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Knichian: aliases file
 [[ ! -f ~/.zsh_aliases ]] || source ~/.zsh_aliases
+
+# Knichian: zoxide
+eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
