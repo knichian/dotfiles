@@ -85,17 +85,17 @@ plugins=(
     zsh-history-substring-search
     # zsh-autocomplete # Heavy-AF!
     sudo
-    dnf
-    fzf
-    ufw
-    colored-man-pages
-    battery
-    git-lfs
-    python
+    # dnf
+    # fzf
+    # ufw
+    # colored-man-pages
+    # battery
+    # git-lfs
+    # python
     # tailscale
     # conda
     # conda-env
-    docker
+    # docker
     # docker-compose
     # lol
 )
