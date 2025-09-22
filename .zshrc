@@ -86,7 +86,7 @@ plugins=(
     # zsh-autocomplete # Heavy-AF!
     sudo
     # dnf
-    # fzf
+    fzf
     # ufw
     # colored-man-pages
     # battery
