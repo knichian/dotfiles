@@ -1,2 +1,3 @@
 alias ranger='. ranger'
+alias py='python'
 alias bpy='bpython'
