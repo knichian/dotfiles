@@ -87,6 +87,7 @@ plugins=(
     sudo
     # dnf
     fzf
+    zoxide
     # ufw
     # colored-man-pages
     # battery
