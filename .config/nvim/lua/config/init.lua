@@ -1,4 +1,4 @@
 require('config.lazy')
 require('config.options')
-require('config.remap')
+require('config.keymaps')
 require('config.theme')

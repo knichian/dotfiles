@@ -1,5 +1,7 @@
 return {
   "nvzone/showkeys",
+  enable = true,
+  lazy = true,
   cmd = "ShowkeysToggle",
   opts = {
     timeout = 1,

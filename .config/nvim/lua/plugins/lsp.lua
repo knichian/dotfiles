@@ -1,30 +1,40 @@
 return {
-    {
-        "mason-org/mason.nvim",
-        lazy = false,
-        opts = { },
-    },
-    {
-        "mason-org/mason-lspconfig.nvim",
---         dependencies = {
---             "mason-org/mason.nvim",
---             "neovim/nvim-lspconfig",
---         },
-        opts = {
-            ensure_installed = {
-                "lua_ls",
-                "pyright",
-                "ts_ls",
-                "rust_analyzer",
-                "clangd"
-            },
-        },
-    },
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
---             return require('lsp')
-        end,
-        opts = {  },
-    }
+	{
+		"mason-org/mason.nvim",
+		enable = true,
+		lazy = false,
+		dependencies = {},
+		opts = {
+			ui = {
+				icons = {
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗"
+				},
+			},
+		},
+	},
+	{
+		"mason-org/mason-lspconfig.nvim",
+		enable = true,
+		lazy = false,
+		dependencies = {},
+		opts = {
+			ensure_installed = {
+				"lua_ls",
+				"pyright",
+				"ts_ls",
+				"rust_analyzer",
+				"clangd"
+			},
+		},
+	},
+	{
+		"neovim/nvim-lspconfig",
+		enable = true,
+		lazy = false,
+		dependencies = {},
+		config = function() return require('lsp') end,
+		opts = {},
+	}
 }
