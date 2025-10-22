@@ -1,0 +1,2 @@
+- [x] catppuccin theme
+- [ ] folder navigation
