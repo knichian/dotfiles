@@ -21,3 +21,7 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
+
+kitty_customization.md
+nvim_customization.md
+ideas.md

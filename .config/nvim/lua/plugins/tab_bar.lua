@@ -1,7 +1,7 @@
 return {
 	{
 		'romgrk/barbar.nvim',
-		enabled = true,
+		enabled = false,
 		version = '^1.0.0', -- optional: only update when a new 1.x version is released
 		dependencies = {
 			'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
@@ -11,13 +11,13 @@ return {
 			animation = true,
 			insert_at_start = true,
 		},
-		init = function() 
-			vim.g.barbar_auto_setup = false 
+		init = function()
+			vim.g.barbar_auto_setup = false
 		end,
 	},
 	{
 		'akinsho/bufferline.nvim',
-		enabled = false,
+		enabled = true,
 		lazy = false,
 		version = "*",
 		dependencies = 'nvim-tree/nvim-web-devicons',
