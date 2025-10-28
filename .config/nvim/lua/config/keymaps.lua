@@ -1,48 +1,44 @@
--- local base_opts = { noremap = true, silent = true }
 
-local keymap = function(mode, lhs, rhs, opts)
-	local base_opts = { noremap = true, silent = true }
-	opts = vim.tbl_deep_extend('force', base_opts, opts)
-	vim.keymap.set(mode, lhs, rhs, opts)
-end
+-- local keymap = function(mode, lhs, rhs, opts)
+-- 	local base_opts = { noremap = true, silent = true }
+-- 	opts = vim.tbl_deep_extend('force', base_opts, opts)
+-- 	vim.keymap.set(mode, lhs, rhs, opts)
+-- end
 
+local base_opts = { noremap = true, silent = true }
+local keymap = vim.keymap.set
 
 local cmd = function(str)
 	local cmd_str = '<Cmd>' .. str .. '<CR>'
 	return cmd_str
 end
 
+-- using LSP defaults
 
 -- Normal --
 -- Remap CTRL-c to a perfect ESC
-keymap('', '<C-c>', '<Esc>', {})
-keymap('n', '<C-c>', '<Esc>', {})
-keymap('v', '<C-c>', '<Esc>', {})
-keymap('i', '<C-c>', '<Esc>', {})
-
--- Lsp Features
-keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-keymap('n', '<leader>df', vim.diagnostic.open_float, {})
-keymap('n', '<leader>dl', cmd('Telescope diagnostics'), {})
+keymap('', '<C-c>', '<Esc>', base_opts)
 
 -- File Fuzzyfinder 
-keymap('n', '<leader>ff', cmd('Telescope find_files'), {})
+keymap('n', '<leader>ff', cmd('Telescope find_files'), base_opts)
 
 -- Visual --
 -- Stay in indent mode:
-keymap("v", "<", "<gv", {})
-keymap("v", ">", ">gv", {})
+keymap("v", "<", "<gv", base_opts)
+keymap("v", ">", ">gv", base_opts)
 
 -- switch off highlight from last search:
-keymap("", "<C-c>", cmd('nohlsearch'), {})
-keymap("", "<Esc>", cmd('nohlsearch'), {})
+keymap("", "<C-c>", cmd('nohlsearch'), base_opts)
+keymap("", "<Esc>", cmd('nohlsearch'), base_opts)
 
--- Cycle buffers back and forth
-keymap("", "<Tab>", cmd("bn"), {})
-keymap("", "<S-Tab>", cmd('bp'), {})
+-- Cycle tabs back and forth
+keymap("n", "<Tab>", cmd("BufferLineCycleNext"), base_opts)
+keymap("n", "<S-Tab>", cmd("BufferLineCyclePrev"), base_opts)
 
 -- Close current buffer
-keymap('n', '<leader>bd', cmd('bd'), {})
+keymap('n', '<leader>bd', cmd('bd'), base_opts)
 
 -- Only window
-keymap('n', '<C-w>o', cmd('only'), {})
+keymap('n', '<C-w>o', cmd('only'), base_opts)
+
+
