@@ -137,9 +137,11 @@ source $ZSH/oh-my-zsh.sh
 
 # Knichian: zoxide
 eval "$(zoxide init zsh)"
-
+ 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+EDITOR='/usr/bin/nvim'
 
 # # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!
