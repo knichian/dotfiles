@@ -25,7 +25,8 @@ return {
 		opts = {
 			options = {
 				mode = 'tabs',
-				separator_style = 'slope',
+				separator_style = 'thick',
+				sort_by = 'insert_at_end',
 			},
 		},
 	},
