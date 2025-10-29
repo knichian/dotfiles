@@ -15,6 +15,8 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.signcolumn = "yes"
 vim.opt.showmode = false
 
+vim.opt.winborder = 'rounded'
+
 -- TAB behavior
 vim.expandtab = true
 vim.opt.tabstop = 4
