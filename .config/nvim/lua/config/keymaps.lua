@@ -8,9 +8,13 @@
 local base_opts = { noremap = true, silent = true }
 local keymap = vim.keymap.set
 
+-- local cmd = function(str)
+-- 	local cmd_str = '<Cmd>' .. str .. '<CR>'
+-- 	return cmd_str
+-- end
+
 local cmd = function(str)
-	local cmd_str = '<Cmd>' .. str .. '<CR>'
-	return cmd_str
+	return '<Cmd>' .. str .. '<CR>'
 end
 
 -- using LSP defaults
@@ -40,5 +44,4 @@ keymap('n', '<leader>bd', cmd('bd'), base_opts)
 
 -- Only window
 keymap('n', '<C-w>o', cmd('only'), base_opts)
-
 

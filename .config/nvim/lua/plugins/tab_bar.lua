@@ -2,6 +2,7 @@ return {
 	{
 		'romgrk/barbar.nvim',
 		enabled = false,
+		lazy = false,
 		version = '^1.0.0', -- optional: only update when a new 1.x version is released
 		dependencies = {
 			'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
@@ -23,7 +24,8 @@ return {
 		dependencies = 'nvim-tree/nvim-web-devicons',
 		opts = {
 			options = {
-				separator_style = 'slant'
+				mode = 'tabs',
+				separator_style = 'slope',
 			},
 		},
 	},
