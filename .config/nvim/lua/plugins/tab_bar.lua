@@ -24,9 +24,9 @@ return {
 		dependencies = 'nvim-tree/nvim-web-devicons',
 		opts = {
 			options = {
-				mode = 'tabs',
+				-- mode = 'tabs',
 				separator_style = 'thick',
-				sort_by = 'insert_at_end',
+				-- sort_by = 'insert_at_end',
 			},
 		},
 	},
