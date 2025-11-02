@@ -45,3 +45,5 @@ keymap('n', '<leader>bd', cmd('bd'), base_opts)
 -- Only window
 keymap('n', '<C-w>o', cmd('only'), base_opts)
 
+keymap('n', '<leader>e', cmd('Lexplore 30'), base_opts) -- quick access to file manager
+
