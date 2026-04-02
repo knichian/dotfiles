@@ -158,4 +158,6 @@ EDITOR='/usr/bin/nvim'
 # unset __conda_setup
 # # <<< conda initialize <<<
 
-[[ ! -f ~/.local/venv/bin/activate ]] || source ~/.local/venv/bin/activate
+BASE_VENV_ACTIVATOR=~/python_envs/base/venv/bin/activate
+[[ ! -f ${BASE_VENV_ACTIVATOR} ]] || source ${BASE_VENV_ACTIVATOR}
+
