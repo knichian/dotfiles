@@ -161,3 +161,4 @@ EDITOR='/usr/bin/nvim'
 BASE_VENV_ACTIVATOR=~/python_envs/base/venv/bin/activate
 [[ ! -f ${BASE_VENV_ACTIVATOR} ]] || source ${BASE_VENV_ACTIVATOR}
 
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
