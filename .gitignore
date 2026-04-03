@@ -1,1 +1,5 @@
 .tmux/plugins
+.config/vlc
+.config/kate
+.config/inkscape
+.config/qutebrowser
