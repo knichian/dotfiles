@@ -1,6 +1,10 @@
 alias ranger='. ranger'
 alias c='clear'
 alias nv='nvim'
+
 alias py='python'
 alias bpy='bpython'
 alias conda_wake='source /home/knichian/miniconda3/bin/activate'
+
+alias la='ls -lAh --group-directories-first'
+alias ll='ls -lh --group-directories-first'
