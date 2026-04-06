@@ -1,7 +1,7 @@
 return {
 	{
 		"nvim-tree/nvim-tree.lua",
-		enabled = false,
+		enabled = true,
 		lazy = false,
 		dependencies = {
 			'nvim-tree/nvim-web-devicons',
@@ -13,7 +13,7 @@ return {
 					vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 				end,
 			})
-		end
+		end,
 	},
 	{
 		'stevearc/oil.nvim',
@@ -23,7 +23,7 @@ return {
 			{
 				"nvim-mini/mini.icons",
 				opts = {},
-			}
+			},
 		},
 		---@module 'oil'
 		---@type oil.SetupOpts
