@@ -43,17 +43,17 @@ return {
 		},
 		opts = {
 			ensure_installed = {
-				"lua_ls",
-				"stylua",
-				"pyright",
-				"clangd",
-				"ts_ls",
-				"rust_analyzer",
+				"lua_ls", -- lua
+				"stylua", -- lua formating
+				"pyright", -- python
+				"clangd", -- C/C++
+				"ts_ls", -- typescript
+				"rust_analyzer", -- rust
 				"cmake-language-server", -- cmake
 				"templ", -- Go + HTML
 				"systemd-lsp", -- systemd
 				"tectonic", -- latex
 			},
-		}
+		},
 	},
 }
