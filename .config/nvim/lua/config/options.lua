@@ -18,7 +18,7 @@ vim.opt.showmode = false
 vim.opt.winborder = 'rounded'
 
 --- TAB behavior
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
