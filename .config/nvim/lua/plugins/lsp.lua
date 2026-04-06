@@ -49,6 +49,10 @@ return {
 				"clangd",
 				"ts_ls",
 				"rust_analyzer",
+				"cmake-language-server", -- cmake
+				"templ", -- Go + HTML
+				"systemd-lsp", -- systemd
+				"tectonic", -- latex
 			},
 		}
 	},
