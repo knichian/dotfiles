@@ -5,7 +5,7 @@ vim.opt.relativenumber = false
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 8
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.mouse = "a"
 vim.opt.splitright = true
