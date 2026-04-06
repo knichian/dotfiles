@@ -1,5 +1,5 @@
 return {
-	{
+	{ -- "neovim/nvim-lspconfig",
 		"neovim/nvim-lspconfig",
 		enable = true,
 		lazy = false,
@@ -9,7 +9,7 @@ return {
 		end,
 		opts = {},
 	},
-	{
+	{ -- "mason-org/mason.nvim"
 		"mason-org/mason.nvim",
 		enable = true,
 		lazy = false,
@@ -25,7 +25,7 @@ return {
 			},
 		},
 	},
-	{
+	{ -- "mason-org/mason-lspconfig.nvim",
 		"mason-org/mason-lspconfig.nvim",
 		enable = true,
 		lazy = false,
@@ -34,7 +34,7 @@ return {
 		},
 		opts = {},
 	},
-	{
+	{ -- "WhoIsSethDaniel/mason-tool-installer.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		enable = true,
 		lazy = false,
