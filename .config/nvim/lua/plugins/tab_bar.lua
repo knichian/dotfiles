@@ -20,13 +20,17 @@ return {
 		'akinsho/bufferline.nvim',
 		enabled = true,
 		lazy = false,
-		version = "*",
-		dependencies = 'nvim-tree/nvim-web-devicons',
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
 		opts = {
 			options = {
-				-- mode = 'tabs',
-				separator_style = 'thick',
-				-- sort_by = 'insert_at_end',
+				separator_style = "thick",
+				themable = true,
+				numbers = "ordinal",
+				indicator = {
+					style = "underline",
+				},
 			},
 		},
 	},
