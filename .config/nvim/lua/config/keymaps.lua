@@ -24,7 +24,7 @@ keymap("n", "<leader>bd", cmd("bd"), base_opts()) -- Close current buffer
 keymap("n", "<Tab>", cmd("BufferLineCycleNext"), base_opts()) -- Cycle tabs forth
 keymap("n", "<S-Tab>", cmd("BufferLineCyclePrev"), base_opts()) -- Cycle tabs back
 keymap("n", "<C-w>o", cmd("only"), base_opts()) -- Makes the current focussed pane the only pane
-keymap("n", "<leader>fe", cmd("Lexplore 30"), base_opts()) -- Toggle quick file manager
+keymap("n", "<leader>fe", cmd("Lexplore 20"), base_opts()) -- Toggle quick file manager
 keymap("n", "<leader>ff", cmd("Telescope find_files"), base_opts()) -- Open File Fuzzyfinder
 
 --- Visual ---
