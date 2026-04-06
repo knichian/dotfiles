@@ -25,3 +25,12 @@ vim.opt.smarttab = true
 
 ---  
 vim.opt.confirm = true
+
+--- folding options
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 4
+vim.opt.foldcolumn = "0"
+vim.opt.foldtext = ""
+
