@@ -3,3 +3,4 @@
 .config/kate
 .config/inkscape
 .config/qutebrowser
+.config/tmux/plugins
