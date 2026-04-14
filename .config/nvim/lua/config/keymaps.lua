@@ -16,7 +16,7 @@ end
 
 --- All-Modes ---
 keymap("", "<Esc>", cmd("nohlsearch"), base_opts()) -- switch off highlight from last search
-keymap("", "<C-c>", "<Esc>", base_opts()) -- Remap CTRL-c to ESC on all modes
+keymap("", "<C-c>", "<Esc><Esc>", base_opts()) -- Remap CTRL-c to ESC on all modes
 keymap("", "<C-c>", cmd("nohlsearch"), base_opts()) -- switch off highlight from last search
 
 --- Normal ---
@@ -33,7 +33,7 @@ keymap("v", "<Esc>", "v", base_opts()) -- Makes Control-c quit directly to Norma
 keymap("v", "<C-c>", "v", base_opts()) -- Makes Control-c quit directly to Normal mode
 
 --- Insert ---
-keymap("i", "<C-c>", "<Esc>", base_opts()) -- Makes Control-c quit directly to Normal mode
+keymap("i", "<C-c>", "<Esc><Esc>", base_opts()) -- Makes Control-c quit directly to Normal mode
 
 --- LSP-Maps ---
 keymap("n", "<leader>bf", cmd("lua vim.lsp.buf.format()"), base_opts("format current buffer"))
