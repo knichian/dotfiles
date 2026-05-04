@@ -6,6 +6,7 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 8
 vim.opt.wrap = true
+vim.opt.breakindent = true
 
 vim.opt.mouse = "a"
 vim.opt.splitright = true
