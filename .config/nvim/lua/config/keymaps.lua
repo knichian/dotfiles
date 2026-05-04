@@ -9,26 +9,22 @@ local base_opts = function(description)
 end
 
 local cmd = function(str)
-	return "<Cmd>" .. str .. "<CR>"
+    return "<Cmd>" .. str .. "<CR>"
 end
 
 --- using LSP defaults ---
 
 --- All-Modes ---
-keymap("", "<Esc>", cmd("nohlsearch"), base_opts()) -- switch off highlight from last search
 keymap("", "<C-c>", "<Esc><Esc>", base_opts()) -- Remap CTRL-c to ESC on all modes
+keymap("", "<Esc>", cmd("nohlsearch"), base_opts()) -- switch off highlight from last search
 keymap("", "<C-c>", cmd("nohlsearch"), base_opts()) -- switch off highlight from last search
 
 --- Normal ---
-keymap("n", "<leader>bd", cmd("bd"), base_opts()) -- Close current buffer
-keymap("n", "<Tab>", cmd("BufferLineCycleNext"), base_opts()) -- Cycle tabs forth
-keymap("n", "<S-Tab>", cmd("BufferLineCyclePrev"), base_opts()) -- Cycle tabs back
 keymap("n", "<C-w>o", cmd("only"), base_opts()) -- Makes the current focussed pane the only pane
-keymap("n", "<leader>fe", cmd("Lexplore 20"), base_opts()) -- Toggle quick file manager
-keymap("n", "<leader>ff", cmd("Telescope find_files"), base_opts()) -- Open File Fuzzyfinder
 
 --- Visual ---
 keymap("v", "<", "<gv", base_opts()) -- Preserve selection while indenting
+keymap("v", ">", ">gv", base_opts()) -- Preserve selection while indenting
 keymap("v", "<Esc>", "v", base_opts()) -- Makes Control-c quit directly to Normal mode
 keymap("v", "<C-c>", "v", base_opts()) -- Makes Control-c quit directly to Normal mode
 
@@ -36,4 +32,18 @@ keymap("v", "<C-c>", "v", base_opts()) -- Makes Control-c quit directly to Norma
 keymap("i", "<C-c>", "<Esc><Esc>", base_opts()) -- Makes Control-c quit directly to Normal mode
 
 --- LSP-Maps ---
-keymap("n", "<leader>bf", cmd("lua vim.lsp.buf.format()"), base_opts("format current buffer"))
+keymap("n", "<leader>gd", vim.lsp.buf.definition, base_opts("go to definition"))
+keymap("n", "<leader>td", cmd("Telescope diagnostics"), base_opts('open diagnostics'))
+keymap("n", "<leader>e", vim.diagnostic.open_float, base_opts("open floating window with full error description"))
+-- keymap("n", "<leader>bf", cmd("lua vim.lsp.buf.format()"), base_opts("format current buffer"))
+keymap("n", "<leader>bf", vim.lsp.buf.format, base_opts("format current buffer"))
+-- TODO: make a shortcut to **rename-symbol**
+
+--- Files --- 
+keymap("n", "<leader>fe", cmd("Lexplore 20"), base_opts()) -- Toggle quick file manager
+keymap("n", "<leader>ff", cmd("Telescope find_files"), base_opts()) -- Open File Fuzzyfinder
+
+--- Tabs | Buffers --- 
+keymap("n", "<leader>bd", cmd("bd"), base_opts()) -- Close current buffer
+keymap("n", "<Tab>", cmd("BufferLineCycleNext"), base_opts()) -- Cycle tabs forth
+keymap("n", "<S-Tab>", cmd("BufferLineCyclePrev"), base_opts()) -- Cycle tabs back
