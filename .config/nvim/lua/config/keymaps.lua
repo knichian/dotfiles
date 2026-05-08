@@ -35,8 +35,9 @@ keymap("i", "<C-c>", "<Esc><Esc>", base_opts()) -- Makes Control-c quit directly
 keymap("n", "<leader>gd", vim.lsp.buf.definition, base_opts("go to definition"))
 keymap("n", "<leader>td", cmd("Telescope diagnostics"), base_opts('open diagnostics'))
 keymap("n", "<leader>e", vim.diagnostic.open_float, base_opts("open floating window with full error description"))
--- keymap("n", "<leader>bf", cmd("lua vim.lsp.buf.format()"), base_opts("format current buffer"))
 keymap("n", "<leader>bf", vim.lsp.buf.format, base_opts("format current buffer"))
+keymap("n", "<leader>grs", vim.lsp.buf.rename, base_opts("rename-symbol"))
+-- keymap("n", "<leader>bf", cmd("lua vim.lsp.buf.format()"), base_opts("format current buffer"))
 -- TODO: make a shortcut to **rename-symbol**
 
 --- Files --- 
