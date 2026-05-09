@@ -1,10 +1,20 @@
-alias ranger='. ranger'
+
 alias c='clear'
-alias nv='nvim'
+alias py='python3'
+alias pip='python3 -m pip'
 
-alias py='python'
-alias bpy='bpython'
-alias conda_wake='source /home/knichian/miniconda3/bin/activate'
+which ranger > /dev/null && alias ranger='. ranger'
+which nvim > /dev/null && alias nv='nvim'
+which bpython > /dev/null && alias bpy='bpython'
 
-alias la='ls -lAh --group-directories-first'
-alias ll='ls -lh --group-directories-first'
+# alias conda_wake='source /home/knichian/miniconda3/bin/activate'
+
+if ( which lsd > /dev/null ); then
+    alias la='lsd -lAh --group-directories-first'
+    alias ll='lsd -lh --group-directories-first'
+    alias lt='lsd --tree --depth=2'
+else
+    alias la='ls -lAh --group-directories-first'
+    alias ll='ls -lh --group-directories-first'
+fi
+
