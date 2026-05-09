@@ -89,7 +89,7 @@ plugins=(
     fzf
     zoxide
     # ufw
-    # colored-man-pages
+    colored-man-pages
     # battery
     # git-lfs
     # python
