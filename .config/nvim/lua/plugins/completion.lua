@@ -28,7 +28,7 @@ return { -- 'saghen/blink.cmp',
 		--
 		-- See :h blink-cmp-config-keymap for defining your own keymap
 		keymap = {
-			preset = "default",
+			preset = "super-tab",
 			-- ['<C-j>'] = { 'accept', 'fallback' },
 			-- ['<CR>'] = { 'accept', 'fallback' },
 			-- ['<C-c>'] = { 'cancel', 'fallback' },
