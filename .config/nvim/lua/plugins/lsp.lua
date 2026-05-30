@@ -31,6 +31,7 @@ return {
 		lazy = false,
 		dependencies = {
 			"mason-org/mason.nvim",
+		  "neovim/nvim-lspconfig",
 		},
 		opts = {},
 	},
@@ -40,6 +41,8 @@ return {
 		lazy = false,
 		dependencies = {
 			"mason-org/mason-lspconfig.nvim",
+      "jay-babu/mason-null-ls.nvim",
+      "jay-babu/mason-nvim-dap.nvim",
 		},
 		opts = {
 			ensure_installed = {
