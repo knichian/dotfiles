@@ -8,6 +8,3 @@ local configs = {
 }
 
 vim.diagnostic.config(configs)
-
-require("lsp.lua")
-require("lsp.python")
