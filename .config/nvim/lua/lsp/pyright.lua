@@ -1,10 +1,11 @@
----@type vim.lsp.Config
-local config = {
+vim.lsp.config["pyright"] = {
     settings = {
-        Python = {
-            typeCheckingMode = "basic",
+        python = {
+            analysis = {
+                typeCheckingMode = "basic",
+            },
         },
     },
 }
 
-vim.lsp.config("pyright", config)
+vim.lsp.enable("pyright")

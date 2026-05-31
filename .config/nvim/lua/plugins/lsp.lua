@@ -33,7 +33,9 @@ return {
 			"mason-org/mason.nvim",
 		  "neovim/nvim-lspconfig",
 		},
-		opts = {},
+		opts = {
+        automatic_enable = false,
+    },
 	},
 	{ -- "WhoIsSethDaniel/mason-tool-installer.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -46,16 +48,17 @@ return {
 		},
 		opts = {
 			ensure_installed = {
-				"lua_ls", -- lua
-				"stylua", -- lua formating
-				"pyright", -- python
+				"lua_ls", -- Lua
+				"stylua", -- Lua formating
+				"pyright", -- Python
+        "jedi_language_server", -- Python
 				"clangd", -- C/C++
-				"ts_ls", -- typescript
 				"rust_analyzer", -- rust
-				"cmake-language-server", -- cmake
+				"ts_ls", -- Typescript
+				"cmake-language-server", -- CMake
 				"templ", -- Go + HTML
-				"systemd-lsp", -- systemd
-				"tectonic", -- latex
+				"systemd-lsp", -- SystemD
+				"tectonic", -- LaTeX
 			},
 		},
 	},

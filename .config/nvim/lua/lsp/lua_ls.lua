@@ -19,3 +19,4 @@ local config = {
 }
 
 vim.lsp.config("lua_ls", config)
+vim.lsp.enable("lua_ls")
