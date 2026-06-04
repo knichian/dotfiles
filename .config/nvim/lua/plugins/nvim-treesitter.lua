@@ -50,6 +50,7 @@ return {
 			"markdown_inline",
 			"latex",
 			"bibtex",
+      "mermaid",
 			-- Serialization: (?)
 			"csv",
 			"xml",
