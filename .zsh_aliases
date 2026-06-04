@@ -10,9 +10,10 @@ which bpython > /dev/null && alias bpy='bpython'
 # alias conda_wake='source /home/knichian/miniconda3/bin/activate'
 
 if ( which lsd > /dev/null ); then
+    alias ls='lsd'
     alias la='lsd -lAh --group-directories-first'
     alias ll='lsd -lh --group-directories-first'
-    alias lt='lsd --tree --depth=2'
+    alias lt='lsd --tree --depth=2 --group-directories-first'
 else
     alias la='ls -lAh --group-directories-first'
     alias ll='ls -lh --group-directories-first'
