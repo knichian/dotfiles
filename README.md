@@ -2,15 +2,15 @@
 
 --- 
 
-- External-Optional-Tools:
-
-    - Tier 1:
-        - Htop
-        - fd
-        - Ranger
-        
-    - Tier 2:
-        - OhMyZSH
-        - P10K prompt
-        - Ripgrep
+- External-Dependencies
+    - OhMyZSH
+    - P10K prompt
+    - ranger
+    - fzf
+    - htop
+    - btop
+    - ripgrep
+    - fd
+    - luaJIT
+    - Rust
 

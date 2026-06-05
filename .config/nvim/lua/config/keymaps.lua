@@ -13,7 +13,7 @@ local cmd = function(str)
 end
 
 --- All-Modes (start) ---
-keymap("", "<C-c>", "<Esc><Esc>", base_opts())      -- Remap CTRL-c to ESC on all modes
+keymap("", "<C-c>", "<Esc><Esc>", base_opts())                                             -- Remap CTRL-c to ESC on all modes
 keymap("", "<Esc>", cmd("nohlsearch"), base_opts("switch off highlight from last search")) -- switch off highlight from last search
 keymap("", "<C-c>", cmd("nohlsearch"), base_opts("switch off highlight from last search")) -- switch off highlight from last search
 --- All-Modes (end) ---
@@ -23,10 +23,10 @@ keymap("n", "<C-w>o", cmd("only"), base_opts("Makes the current focussed window 
 --- Normal (end) ---
 
 --- Visual (start) ---
-keymap("v", "<", "<gv", base_opts())   -- Preserve selection while indenting
-keymap("v", ">", ">gv", base_opts())   -- Preserve selection while indenting
-keymap("v", "<Esc>", "v", base_opts()) -- Makes Control-c quit directly to Normal mode
-keymap("v", "<C-c>", "v", base_opts()) -- Makes Control-c quit directly to Normal mode
+keymap("v", "<", "<gv", base_opts("Preserve selection while indenting"))             -- Preserve selection while indenting
+keymap("v", ">", ">gv", base_opts("Preserve selection while indenting"))             -- Preserve selection while indenting
+keymap("v", "<Esc>", "v", base_opts("Makes Control-c quit directly to Normal mode")) -- Makes Control-c quit directly to Normal mode
+keymap("v", "<C-c>", "v", base_opts("Makes Control-c quit directly to Normal mode")) -- Makes Control-c quit directly to Normal mode
 --- Visual (end) ---
 
 --- Insert (start) ---
@@ -34,25 +34,37 @@ keymap("i", "<C-c>", "<Esc><Esc>", base_opts()) -- Makes Control-c quit directly
 --- Insert (end) ---
 
 --- LSP-Maps (start) ---
-keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("format current buffer"))
-keymap("n", "<leader>lgd", vim.lsp.buf.definition, base_opts("go to definition"))
-keymap("n", "<leader>lof", vim.diagnostic.open_float, base_opts("open floating window with full error description"))
-keymap("n", "<leader>lrs", vim.lsp.buf.rename, base_opts("rename-symbol"))
-keymap("n", "<leader>lsh", vim.lsp.buf.signature_help, base_opts("rename-symbol"))
-keymap("n", "<leader>ltd", cmd("Telescope diagnostics"), base_opts('open diagnostics'))
+keymap("n", "<leader>l", "", base_opts("LSP related commands"))
+keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("Format current buffer"))
+keymap("n", "<leader>ld", cmd("Telescope diagnostics"), base_opts('Open telescope diagnostics'))
+keymap("n", "<leader>lgd", vim.lsp.buf.definition, base_opts("Go to definition"))
+keymap("n", "<leader>lof", vim.diagnostic.open_float, base_opts("Open floating window with full error description"))
+keymap("n", "<leader>lrs", vim.lsp.buf.rename, base_opts("Rename-symbol"))
+keymap("n", "<leader>lsh", vim.lsp.buf.signature_help, base_opts("Open signature-help"))
+keymap("n", "<leader>ltd", vim.lsp.buf.type_definition, base_opts("Go to type-definition"))
 --- LSP-Maps (end) ---
 
 --- Files (start) ---
-keymap("n", "<leader>fe", cmd("Lexplore 20"), base_opts("Toggle quick file manager"))      -- Toggle quick file manager
-keymap("n", "<leader>fs", cmd("Telescope find_files"), base_opts("Open File Fuzzyfinder")) -- Open File Fuzzyfinder
-keymap("n", "<leader>fw", cmd("write"), base_opts("Open File Fuzzyfinder"))                -- Open File Fuzzyfinder
+keymap("n", "<leader>f", "", base_opts("File related commands"))
+keymap("n", "<leader>fe", cmd("Lexplore 20"), base_opts("Toggle quick file manager")) -- Toggle quick file manager
+keymap("n", "<leader>fs", cmd("Telescope find_files"), base_opts("Search files"))     -- Search files
+keymap("n", "<leader>fgs", cmd("Telescope git_files"), base_opts("Search files on Git repo"))     -- Search files
 --- Files (end) ---
 
 --- [ Tabs | Buffers ] (start) ---
-keymap("n", "<leader>bd", cmd("bdelete"), base_opts("Close current buffer"))                  -- Close current buffer
-keymap("n", "<leader>bn", cmd("BufferLineCycleNext"), base_opts("Cycle to next buffer")) -- Cycle buffer forth
+keymap("n", "<leader>b", "", base_opts("Buffer related commands"))
+keymap("n", "<leader>bd", cmd("bd"), base_opts("Close current buffer"))                      -- Close current buffer
+keymap("n", "<leader>bn", cmd("BufferLineCycleNext"), base_opts("Cycle to next buffer"))     -- Cycle buffer forth
 keymap("n", "<leader>bp", cmd("BufferLineCyclePrev"), base_opts("Cycle to previous buffer")) -- Cycle buffer back
-keymap("n", "<leader>bw", cmd("write"), base_opts("Save current buffer"))  -- Save buffer
-keymap("n", "<Tab>", cmd("BufferLineCycleNext"), base_opts("Cycle to next buffer"))      -- Cycle buffer forth
+keymap("n", "<leader>bw", cmd("w"), base_opts("Save current buffer"))                        -- Save buffer
+keymap("n", "<Tab>", cmd("BufferLineCycleNext"), base_opts("Cycle to next buffer"))          -- Cycle buffer forth
 keymap("n", "<S-Tab>", cmd("BufferLineCyclePrev"), base_opts("Cycle to previous buffer"))    -- Cycle buffer back
 --- [ Tabs | Buffers ] (end) ---
+
+--- Windows (start)
+keymap("n", "<leader>w", "", base_opts("Window related commands"))
+keymap("n", "<leader>wsv", cmd("sp"), base_opts("Horizontal split window"))
+keymap("n", "<leader>wsh", cmd("vs"), base_opts("Vertical split window"))
+keymap("n", "<leader>wo", cmd("on"), base_opts("Maximize current window"))
+--- Windows (end)
+
