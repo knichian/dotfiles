@@ -8,5 +8,5 @@ local configs = {
 
 vim.diagnostic.config(configs)
 
-require("lsp.lua_ls")
-require("lsp.pyright")
+-- require("lsp.lua_ls")
+-- require("lsp.pyright")

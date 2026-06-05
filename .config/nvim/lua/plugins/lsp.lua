@@ -36,7 +36,7 @@ return {
             "neovim/nvim-lspconfig",
         },
         opts = {
-            automatic_enable = false,
+            automatic_enable = true,
         },
     },
     { -- "WhoIsSethDaniel/mason-tool-installer.nvim",
