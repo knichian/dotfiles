@@ -1,4 +1,6 @@
+-- require('config.options_pre')
 require('config.lazy')
 require('config.options')
+-- require('config.options_post')
 require('config.keymaps')
 require('config.theme')

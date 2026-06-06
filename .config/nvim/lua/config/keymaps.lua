@@ -1,5 +1,5 @@
-local keymap = vim.keymap.set
 
+local keymap = vim.keymap.set
 
 local base_opts = function(description)
 	return {
@@ -9,28 +9,26 @@ local base_opts = function(description)
 	}
 end
 
-
 local cmd = function(str)
 	return "<Cmd>" .. str .. "<CR>"
 end
 
-
 ---- All-Modes (start) ----
-keymap("", "<C-c>", "<Esc><Esc>", base_opts()) -- Remap CTRL-c to ESC on all modes
-keymap("", "<Esc>", cmd("nohlsearch"), base_opts("switch off highlight from last search")) -- switch off highlight from last search
-keymap("", "<C-c>", cmd("nohlsearch"), base_opts("switch off highlight from last search")) -- switch off highlight from last search
+keymap("", "<C-c>", "<Esc><Esc>", base_opts()) -- Remap CT
+keymap("", "<Esc>", cmd("nohlsearch"), base_opts("switch off highlight from last search"))
+keymap("", "<C-c>", cmd("nohlsearch"), base_opts("switch off highlight from last search"))
 ---- All-Modes (end) ----
 
 ---- Visual (start) ----
-keymap("v", "<", "<gv", base_opts("Preserve selection while indenting")) -- Preserve selection while indenting
-keymap("v", ">", ">gv", base_opts("Preserve selection while indenting")) -- Preserve selection while indenting
-keymap("v", "<Esc>", "v", base_opts("Makes Control-c quit directly to Normal mode")) -- Makes Control-c quit directly to Normal mode
-keymap("v", "<C-c>", "v", base_opts("Makes Control-c quit directly to Normal mode")) -- Makes Control-c quit directly to Normal mode
+keymap("v", "<", "<gv", base_opts("Preserve selection while indenting"))
+keymap("v", ">", ">gv", base_opts("Preserve selection while indenting"))
+keymap("v", "<Esc>", "v", base_opts("Makes Control-c quit directly to Normal mode"))
+keymap("v", "<C-c>", "v", base_opts("Makes Control-c quit directly to Normal mode"))
 ---- Visual (end) ----
 
 ---- Insert (start) ----
-keymap("i", "<C-c>", "<Esc><Esc>", base_opts()) -- Makes Control-c quit directly to Normal mode
----- Insert (end) ----
+keymap("i", "<C-c>", "<Esc><Esc>", base_opts())
+---- Insert (end)
 
 ---- LSP-Maps (start) ----
 keymap("n", "<leader>l", "", base_opts("LSP related operations"))
@@ -53,18 +51,17 @@ keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("Format current buffer"
 
 ---- Files (start) ----
 keymap("n", "<leader>f", "", base_opts("File related operations"))
-keymap("n", "<leader>fe", cmd("Lexplore 20"), base_opts("Toggle quick file manager")) -- Toggle quick file manager
-keymap("n", "<leader>fs", cmd("Telescope find_files"), base_opts("Search files")) -- Search files
-keymap("n", "<leader>fgs", cmd("Telescope git_files"), base_opts("Search files on Git repo")) -- Search files
+keymap("n", "<leader>fe", cmd("Lexplore 20"), base_opts("Toggle quick file manager"))
+keymap("n", "<leader>fs", cmd("Telescope find_files"), base_opts("Search files"))
+keymap("n", "<leader>fgs", cmd("Telescope git_files"), base_opts("Search files on Git repo"))
 ---- Files (end) ----
 
 ---- [ Buffers ] (start) ----
 keymap("n", "<leader>b", "", base_opts("Buffer related operations"))
-keymap("n", "<leader>bd", cmd("bd"), base_opts("Close current buffer")) -- Close current buffer
-keymap("n", "<leader>bc", cmd("bd"), base_opts("Close current buffer")) -- Close current buffer
-keymap("n", "<leader>bn", cmd("BufferLineCycleNext"), base_opts("Cycle to next buffer")) -- Cycle buffer forth
-keymap("n", "<leader>bp", cmd("BufferLineCyclePrev"), base_opts("Cycle to previous buffer")) -- Cycle buffer back
-keymap("n", "<leader>bw", cmd("w"), base_opts("Save current buffer")) -- Save buffer
+keymap("n", "<leader>bd", cmd("bd"), base_opts("Delete current buffer"))
+keymap("n", "<leader>bn", cmd("BufferLineCycleNext"), base_opts("Cycle to next buffer"))
+keymap("n", "<leader>bp", cmd("BufferLineCyclePrev"), base_opts("Cycle to previous buffer"))
+keymap("n", "<leader>bw", cmd("w"), base_opts("Save current buffer"))
 
 keymap("n", "<Tab>", cmd("BufferLineCycleNext"), base_opts("Cycle to next buffer"))
 keymap("n", "<S-Tab>", cmd("BufferLineCyclePrev"), base_opts("Cycle to previous buffer"))
@@ -72,9 +69,9 @@ keymap("n", "<S-Tab>", cmd("BufferLineCyclePrev"), base_opts("Cycle to previous 
 
 ---- [ Tabs ] (start) ----
 keymap("n", "<leader>t", "", base_opts("Tabs related operations"))
-keymap("n", "<leader>tn", cmd("tabnext"), base_opts("Cycle to next buffer")) -- Cycle buffer forth
-keymap("n", "<leader>tp", cmd("tabprevious"), base_opts("Cycle to previous buffer")) -- Cycle buffer back
-keymap("n", "<leader>tc", cmd("tabnew"), base_opts("Open new tab"))
+keymap("n", "<leader>tn", cmd("tabnext"), base_opts("Cycle to next buffer"))
+keymap("n", "<leader>tp", cmd("tabprevious"), base_opts("Cycle to previous buffer"))
+keymap("n", "<leader>tt", cmd("tabnew"), base_opts("Open new tab"))
 keymap("n", "<leader>tc", cmd("tabclose"), base_opts("Close current tab"))
 ---- [ Tabs ] (end) ----
 

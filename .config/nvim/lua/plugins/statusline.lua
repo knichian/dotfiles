@@ -4,7 +4,12 @@ return {
 		enabled = true,
 		lazy = false,
 		dependencies = { 'nvim-tree/nvim-web-devicons' },
-		opts = {},
+		opts = {
+        options = {
+            section_separators = { left = '', right = '' },
+            component_separators = { left = '', right = '' },
+        },
+    },
 	},
 	{
 		'echasnovski/mini.statusline',
@@ -12,5 +17,5 @@ return {
 		lazy = false,
 		version = false,
 		opts = {},
-	}
+	},
 }
