@@ -1,5 +1,5 @@
----@type vim.lsp.Config
-local config = {
+
+vim.lsp.config["lua_ls"] = {
     settings = {
         Lua = {
             diagnostics = {
@@ -18,5 +18,7 @@ local config = {
     },
 }
 
-vim.lsp.config("lua_ls", config)
 vim.lsp.enable("lua_ls")
+-- vim.lsp.enable("lua-language-server")
+vim.lsp.enable("stylua")
+
