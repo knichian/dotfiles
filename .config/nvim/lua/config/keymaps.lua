@@ -41,9 +41,15 @@ keymap("n", "<leader>lfe", vim.diagnostic.open_float, base_opts("Open error floa
 keymap("n", "<leader>lfh", vim.lsp.buf.signature_help, base_opts("Open signature-help"))
 
 keymap("n", "<leader>lg", "", base_opts("LSP GOTO operations"))
-keymap("n", "<leader>lgt", vim.lsp.buf.type_definition, base_opts("Go to type-definition"))
-keymap("n", "<leader>lgdf", vim.lsp.buf.definition, base_opts("Go to definition"))
 keymap("n", "<leader>lgdc", vim.lsp.buf.declaration, base_opts("Go to declaration"))
+keymap("n", "<leader>lgdf", vim.lsp.buf.definition, base_opts("Go to definition"))
+keymap("n", "<leader>lgt", vim.lsp.buf.type_definition, base_opts("Go to type-definition"))
+
+keymap("n", "<leader>ll", "", base_opts("LSP list(telescope) operations"))
+-- TODO: list declarations
+-- TODO: list definitions
+-- TODO: list type-definition
+-- TODO: list references
 
 keymap("n", "<leader>lrs", vim.lsp.buf.rename, base_opts("Rename-symbol"))
 keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("Format current buffer"))

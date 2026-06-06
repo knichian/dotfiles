@@ -3,6 +3,7 @@ return {
         "numToStr/Comment.nvim",
         opts = {},
     },
+
     { -- "lukas-reineke/indent-blankline.nvim",
         "lukas-reineke/indent-blankline.nvim",
         enable = true,
@@ -11,6 +12,7 @@ return {
         ---@type ibl.config
         opts = {},
     },
+
     { -- "sei40kr/nvimacs",
         "sei40kr/nvimacs",
         enabled = true,
@@ -20,11 +22,13 @@ return {
         end,
         opts = {},
     },
+
     { -- "windwp/nvim-autopairs",
         "windwp/nvim-autopairs",
         event = "InsertEnter",
         opts = {},
     },
+
     { -- "nvzone/showkeys",
         "nvzone/showkeys",
         enable = true,
@@ -36,6 +40,7 @@ return {
             -- more opts
         },
     },
+
     { -- "kylechui/nvim-surround",
         "kylechui/nvim-surround",
         enable = true,
@@ -43,6 +48,7 @@ return {
         event = "VeryLazy",
         opts = {},
     },
+
     { -- "mcauley-penney/visual-whitespace.nvim",
         "mcauley-penney/visual-whitespace.nvim",
         config = true,
@@ -75,9 +81,13 @@ return {
             ignore = { filetypes = {}, buftypes = {} },
         },
     },
+
     { -- "folke/which-key.nvim",
         "folke/which-key.nvim",
         event = "VeryLazy",
+        dependencies = {
+            "nvim-mini/mini.icons",
+        },
         opts = {
             -- your configuration comes here
             -- or leave it empty to use the default settings
