@@ -1,4 +1,3 @@
-
 local keymap = vim.keymap.set
 
 local base_opts = function(description)
@@ -95,3 +94,8 @@ keymap("n", "<leader>wo", cmd("on"), base_opts("Maximize current window"))
 keymap("n", "<C-w>o", cmd("on"), base_opts("Maximize current window"))
 ---- Windows (end) ----
 
+---- NVIM (start) ----
+keymap("n", "<leader>n", "", base_opts("Nvim related operations"))
+-- TODO: edit keymaps configuration
+-- TODO: edit options configuration
+---- NVIM (end) ----

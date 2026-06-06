@@ -10,4 +10,4 @@ vim.lsp.config["pyright"] = {
 }
 
 vim.lsp.enable("pyright")
-
+vim.lsp.enable("black")
