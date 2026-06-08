@@ -6,15 +6,15 @@
     - Important:
         - OhMyZSH
         - P10K shell prompt
-        - ranger
-        - fzf
-        - htop
-        - luaJIT
-        - Rust
         - Nvim
-        - ripgrep
-        - fd
-        - btop
+        - Ranger
+        - Fzf
+        - Htop
+        - LuaJIT
+        - Rust
+        - Ripgrep
+        - Fd
     - Extra:
-        - 
+        - Btop
+
 
