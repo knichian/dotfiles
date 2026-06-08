@@ -9,6 +9,6 @@ local configs = {
 
 vim.diagnostic.config(configs)
 
-require("lsp.lua_config")
-require("lsp.python_config")
+require("lsps.lua_config")
+require("lsps.python_config")
 

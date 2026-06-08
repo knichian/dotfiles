@@ -1,20 +1,16 @@
 return {
 	{ -- "neovim/nvim-lspconfig",
 		"neovim/nvim-lspconfig",
-		enable = true,
-		lazy = false,
 		dependencies = {
-			"mason-org/mason.nvim",
+			-- "mason-org/mason.nvim",
 		},
 		config = function()
-			return require("lsp")
+			return require("config.lsp")
 		end,
 		opts = {},
 	},
 	{ -- "mason-org/mason.nvim"
 		"mason-org/mason.nvim",
-		enable = true,
-		lazy = false,
 		dependencies = {},
 		opts = {
 			ui = {
@@ -29,20 +25,14 @@ return {
 	},
 	{ -- "mason-org/mason-lspconfig.nvim",
 		"mason-org/mason-lspconfig.nvim",
-		enable = true,
-		lazy = true,
 		dependencies = {
 			"mason-org/mason.nvim",
 			"neovim/nvim-lspconfig",
 		},
-		opts = {
-			-- automatic_enable = true,
-		},
+		opts = {},
 	},
 	{ -- "WhoIsSethDaniel/mason-tool-installer.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		enable = true,
-		lazy = true,
 		dependencies = {
 			"mason-org/mason-lspconfig.nvim",
 			"jay-babu/mason-null-ls.nvim",
@@ -51,8 +41,8 @@ return {
 		opts = {
 			ensure_installed = {
 				--- LSP ---
-				"lua_ls", -- Lua
-				"stylua", -- Lua formating
+				-- "lua_ls", -- Lua
+                "lua-language-server", -- Lua
 				"pyright", -- Python
 				"jedi_language_server", -- Python
 				"clangd", -- C/C++
@@ -64,6 +54,7 @@ return {
 				"tectonic", -- LaTeX
 				"docker_language_server", -- Docker
 				--- Formater ---
+				"stylua", -- Lua formating
 				"autopep8", -- Python
 				"autoflake", -- Python
 				"black", -- Python

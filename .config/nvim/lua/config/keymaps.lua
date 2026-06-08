@@ -35,9 +35,9 @@ keymap("n", "<leader>l", "", base_opts("LSP related operations"))
 keymap("n", "<leader>ld", cmd("Telescope diagnostics"), base_opts("Open telescope diagnostics"))
 
 keymap("n", "<leader>lf", "", base_opts("LSP floater related operations"))
-keymap("n", "<leader>lfs", vim.lsp.buf.hover, base_opts("Open hover floater"))
 keymap("n", "<leader>lfe", vim.diagnostic.open_float, base_opts("Open error floater with full description"))
-keymap("n", "<leader>lfh", vim.lsp.buf.signature_help, base_opts("Open signature-help"))
+keymap("n", "<leader>lfh", vim.lsp.buf.hover, base_opts("Open hover floater"))
+keymap("n", "<leader>lfs", vim.lsp.buf.signature_help, base_opts("Open signature-help"))
 
 keymap("n", "<leader>lg", "", base_opts("LSP GOTO operations"))
 keymap("n", "<leader>lgdc", vim.lsp.buf.declaration, base_opts("Go to declaration"))
@@ -45,10 +45,10 @@ keymap("n", "<leader>lgdf", vim.lsp.buf.definition, base_opts("Go to definition"
 keymap("n", "<leader>lgt", vim.lsp.buf.type_definition, base_opts("Go to type-definition"))
 
 keymap("n", "<leader>ll", "", base_opts("LSP list(telescope) operations"))
--- TODO: list declarations
--- TODO: list definitions
--- TODO: list type-definition
--- TODO: list references
+keymap("n", "<leader>llr", cmd("Telescope lsp_references"), base_opts("List references"))
+keymap("n", "<leader>lldf", cmd("Telescope lsp_definitions"), base_opts("List definitions"))
+keymap("n", "<leader>lldt", cmd("Telescope lsp_type_definitions"), base_opts("List type-definitions"))
+keymap("n", "<leader>lls", cmd("Telescope lsp_workspace_symbols"), base_opts("List document-symbols"))
 
 keymap("n", "<leader>lrs", vim.lsp.buf.rename, base_opts("Rename-symbol"))
 keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("Format current buffer"))
@@ -84,7 +84,8 @@ keymap("n", "<leader>tc", cmd("tabclose"), base_opts("Close current tab"))
 keymap("n", "<leader>w", "", base_opts("Window related operations"))
 
 keymap("n", "<leader>wc", cmd("q"), base_opts("Close current window"))
-keymap("n", "<leader>wd", cmd("wq"), base_opts("Save current buffer & close current window"))
+keymap("n", "<leader>wq", cmd("q"), base_opts("Quit current window"))
+keymap("n", "<leader>wx", cmd("wq"), base_opts("Save current buffer & close current window"))
 
 keymap("n", "<leader>ws", "", base_opts("Window split related operations"))
 keymap("n", "<leader>wsh", cmd("sp"), base_opts("Horizontal split window"))
@@ -96,6 +97,9 @@ keymap("n", "<C-w>o", cmd("on"), base_opts("Maximize current window"))
 
 ---- NVIM (start) ----
 keymap("n", "<leader>n", "", base_opts("Nvim related operations"))
+keymap("n", "<leader>nlh", cmd("Telescope help_tags"), base_opts("Open help tags list"))
+keymap("n", "<leader>nlk", cmd("Telescope keymaps"), base_opts("Open keymaps list"))
+keymap("n", "<leader>nlb", cmd("Telescope buffers"), base_opts("Open buffer list"))
 -- TODO: edit keymaps configuration
 -- TODO: edit options configuration
 ---- NVIM (end) ----
