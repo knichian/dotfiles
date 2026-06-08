@@ -1,9 +1,6 @@
 return {
 	{ -- "neovim/nvim-lspconfig",
 		"neovim/nvim-lspconfig",
-		dependencies = {
-			-- "mason-org/mason.nvim",
-		},
 		config = function()
 			return require("config.lsp")
 		end,
@@ -11,7 +8,6 @@ return {
 	},
 	{ -- "mason-org/mason.nvim"
 		"mason-org/mason.nvim",
-		dependencies = {},
 		opts = {
 			ui = {
 				icons = {
@@ -21,15 +17,23 @@ return {
 				},
 				border = "rounded",
 			},
+			firewall = {
+				enabled = true,
+			},
 		},
 	},
 	{ -- "mason-org/mason-lspconfig.nvim",
 		"mason-org/mason-lspconfig.nvim",
 		dependencies = {
-			"mason-org/mason.nvim",
 			"neovim/nvim-lspconfig",
+			"mason-org/mason.nvim",
 		},
-		opts = {},
+		opts = {
+			ensure_installed = {
+                "lua_ls",
+                "rust_analyzer",
+            },
+		},
 	},
 	{ -- "WhoIsSethDaniel/mason-tool-installer.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -42,9 +46,9 @@ return {
 			ensure_installed = {
 				--- LSP ---
 				-- "lua_ls", -- Lua
-                "lua-language-server", -- Lua
+				"lua-language-server", -- Lua
 				"pyright", -- Python
-				"jedi_language_server", -- Python
+				"jedi-language-server", -- Python
 				"clangd", -- C/C++
 				"rust_analyzer", -- Rust
 				"ts_ls", -- Typescript
@@ -55,8 +59,6 @@ return {
 				"docker_language_server", -- Docker
 				--- Formater ---
 				"stylua", -- Lua formating
-				"autopep8", -- Python
-				"autoflake", -- Python
 				"black", -- Python
 			},
 		},

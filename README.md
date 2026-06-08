@@ -3,14 +3,18 @@
 --- 
 
 - External-Dependencies
-    - OhMyZSH
-    - P10K prompt
-    - ranger
-    - fzf
-    - htop
-    - btop
-    - ripgrep
-    - fd
-    - luaJIT
-    - Rust
+    - Important:
+        - OhMyZSH
+        - P10K shell prompt
+        - ranger
+        - fzf
+        - htop
+        - luaJIT
+        - Rust
+        - Nvim
+        - ripgrep
+        - fd
+        - btop
+    - Extra:
+        - 
 
