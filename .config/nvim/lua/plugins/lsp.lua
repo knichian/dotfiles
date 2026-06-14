@@ -48,7 +48,7 @@ return {
 				-- "lua_ls", -- Lua
 				"lua-language-server", -- Lua
 				"pyright", -- Python
-				"jedi-language-server", -- Python
+				-- "jedi-language-server", -- Python
 				"clangd", -- C/C++
 				"rust_analyzer", -- Rust
 				"ts_ls", -- Typescript

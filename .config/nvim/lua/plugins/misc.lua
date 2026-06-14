@@ -15,8 +15,8 @@ return {
 
 	{ -- "sei40kr/nvimacs",
 		"sei40kr/nvimacs",
-		enabled = true,
-		lazy = false,
+		-- enabled = true,
+		-- lazy = false,
 		event = { "InsertEnter *", "CmdlineEnter *" },
 		config = function() end,
 		opts = {},
@@ -36,7 +36,6 @@ return {
 		opts = {
 			timeout = 1,
 			maxkeys = 5,
-			-- more opts
 		},
 	},
 
