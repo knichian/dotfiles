@@ -16,8 +16,8 @@ end
 
 ---- Misc (start) ----
 keymap("", "<C-c>", "<Esc><Esc><Esc>", base_opts()) -- Remap CT
-keymap("", "<Esc>", cmd("nohlsearch"), base_opts("switch off highlight from last search"))
-keymap("", "<C-c>", cmd("nohlsearch"), base_opts("switch off highlight from last search"))
+keymap("n", "<Esc>", cmd("nohlsearch"), base_opts("switch off highlight from last search"))
+keymap("n", "<C-c>", cmd("nohlsearch"), base_opts("switch off highlight from last search"))
 -- keymap("v", "<Esc>", "v", base_opts("Makes Control-c quit directly from Visual to Normal mode"))
 -- keymap("v", "<C-c>", "v", base_opts("Makes Control-c quit directly from Visual to Normal mode"))
 ---- Misc (end) ----
@@ -25,6 +25,10 @@ keymap("", "<C-c>", cmd("nohlsearch"), base_opts("switch off highlight from last
 ---- Visual (start) ----
 keymap("v", "<", "<gv", base_opts("Preserve selection while indenting"))
 keymap("v", ">", ">gv", base_opts("Preserve selection while indenting"))
+keymap("v", "<Esc>", "v", base_opts("Makes Control-c quit directly from Visual to Normal mode"))
+keymap("v", "<C-c>", "v", base_opts("Makes Control-c quit directly from Visual to Normal mode"))
+keymap("x", "<Esc>", "vv", base_opts("Makes Control-c quit directly from Visual-Block to Normal mode"))
+keymap("x", "<C-c>", "vv", base_opts("Makes Control-c quit directly from Visual-Block to Normal mode"))
 ---- Visual (end) ----
 
 ---- LSP-Maps (start) ----
@@ -36,14 +40,14 @@ keymap("n", "<leader>lfh", vim.lsp.buf.hover, base_opts("Open hover floater"))
 keymap("n", "<leader>lfs", vim.lsp.buf.signature_help, base_opts("Open signature-help"))
 
 keymap("n", "<leader>lg", "", base_opts("LSP GOTO operations"))
-keymap("n", "<leader>lgdc", vim.lsp.buf.declaration, base_opts("Go to declaration"))
-keymap("n", "<leader>lgdf", vim.lsp.buf.definition, base_opts("Go to definition"))
+keymap("n", "<leader>lgd", vim.lsp.buf.definition, base_opts("Go to definition"))
+keymap("n", "<leader>lgD", vim.lsp.buf.declaration, base_opts("Go to declaration"))
 keymap("n", "<leader>lgt", vim.lsp.buf.type_definition, base_opts("Go to type-definition"))
 
 keymap("n", "<leader>ll", "", base_opts("LSP list(telescope) operations"))
 keymap("n", "<leader>llr", cmd("Telescope lsp_references"), base_opts("List references"))
-keymap("n", "<leader>lldf", cmd("Telescope lsp_definitions"), base_opts("List definitions"))
-keymap("n", "<leader>lldt", cmd("Telescope lsp_type_definitions"), base_opts("List type-definitions"))
+keymap("n", "<leader>lld", cmd("Telescope lsp_definitions"), base_opts("List definitions"))
+keymap("n", "<leader>llt", cmd("Telescope lsp_type_definitions"), base_opts("List type-definitions"))
 keymap("n", "<leader>lls", cmd("Telescope lsp_workspace_symbols"), base_opts("List document-symbols"))
 
 keymap("n", "<leader>ld", cmd("Telescope diagnostics"), base_opts("Open telescope diagnostics"))
