@@ -7,7 +7,16 @@ return {
 	{ -- "yousefhadder/markdown-plus.nvim",
 		"yousefhadder/markdown-plus.nvim",
 		ft = "markdown",
-		opts = {},
+		opts = {
+			keymaps = {
+				enabled = true, -- master toggle for default markdown-plus keymaps
+			},
+			table = {
+				keymaps = {
+					enabled = true, -- table feature keymaps
+				},
+			},
+		},
 	},
 	{ -- "kevalin/mermaid.nvim",
 		"kevalin/mermaid.nvim",
