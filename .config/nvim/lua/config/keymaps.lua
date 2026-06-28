@@ -51,7 +51,7 @@ keymap("n", "<leader>llt", cmd("Telescope lsp_type_definitions"), base_opts("Lis
 keymap("n", "<leader>lls", cmd("Telescope lsp_workspace_symbols"), base_opts("List document-symbols"))
 
 keymap("n", "<leader>ld", cmd("Telescope diagnostics"), base_opts("Open telescope diagnostics"))
-keymap("n", "<leader>lrs", vim.lsp.buf.rename, base_opts("Rename-symbol"))
+keymap("n", "<leader>lr", vim.lsp.buf.rename, base_opts("Rename-symbol"))
 keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("Format current buffer"))
 ---- LSP-Maps (end) ----
 
@@ -90,6 +90,12 @@ keymap("n", "<leader>wx", cmd("wq"), base_opts("Save current buffer & close curr
 keymap("n", "<leader>ws", "", base_opts("Window split operations"))
 keymap("n", "<leader>wsh", cmd("sp"), base_opts("Horizontal split window"))
 keymap("n", "<leader>wsv", cmd("vs"), base_opts("Vertical split window"))
+
+keymap("n", "<leader>w", "", base_opts(""))
+keymap("n", "<leader>wh", "<C-w>h", base_opts(""))
+keymap("n", "<leader>wj", "<C-w>j", base_opts(""))
+keymap("n", "<leader>wk", "<C-w>k", base_opts(""))
+keymap("n", "<leader>wl", "<C-w>l", base_opts(""))
 
 keymap("n", "<leader>wo", cmd("on"), base_opts("Maximize current window"))
 keymap("n", "<C-w>o", cmd("on"), base_opts("Maximize current window"))
