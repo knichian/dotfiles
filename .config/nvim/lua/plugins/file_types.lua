@@ -1,6 +1,7 @@
 return {
 	{ -- "tadmccorkle/markdown.nvim",
 		"tadmccorkle/markdown.nvim",
+		enabled = false,
 		ft = "markdown", -- or "event = "VeryLazy""
 		opts = {},
 	},
@@ -18,9 +19,8 @@ return {
 			},
 		},
 	},
-    { -- "MeanderingProgrammer/render-markdown.nvim"
+	{ -- "MeanderingProgrammer/render-markdown.nvim"
 		"MeanderingProgrammer/render-markdown.nvim",
-        -- enabled = false,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons",
@@ -35,9 +35,27 @@ return {
 			},
 		},
 	},
+	{ -- "obsidian-nvim/obsidian.nvim",
+		"obsidian-nvim/obsidian.nvim",
+		version = "*", -- use latest release, remove to use latest commit
+		---@module 'obsidian'
+		---@type obsidian.config
+		opts = {
+			legacy_commands = false, -- this will be removed in 4.0.0
+			workspaces = {
+				-- {
+				-- 	name = "personal",
+				-- 	path = "~/vaults/personal",
+				-- },
+				-- {
+				-- 	name = "work",
+				-- 	path = "~/vaults/work",
+				-- },
+			},
+		},
+	},
 	{ -- "kevalin/mermaid.nvim",
 		"kevalin/mermaid.nvim",
 		opts = {},
 	},
-	
 }
