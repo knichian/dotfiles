@@ -35,6 +35,13 @@ return {
 			},
 		},
 	},
+	{ -- "roodolv/markdown-toggle.nvim",
+		"roodolv/markdown-toggle.nvim",
+		-- config = function()
+		--  require("markdown-toggle").setup({})
+		-- end,
+		opts = {},
+	},
 	{ -- "kevalin/mermaid.nvim",
 		"kevalin/mermaid.nvim",
 		opts = {},
