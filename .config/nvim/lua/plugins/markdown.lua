@@ -21,6 +21,7 @@ return {
 	},
 	{ -- "MeanderingProgrammer/render-markdown.nvim"
 		"MeanderingProgrammer/render-markdown.nvim",
+		ft = "markdown",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons",
@@ -37,6 +38,7 @@ return {
 	},
 	{ -- "roodolv/markdown-toggle.nvim",
 		"roodolv/markdown-toggle.nvim",
+		ft = "markdown",
 		-- config = function()
 		--  require("markdown-toggle").setup({})
 		-- end,
@@ -44,6 +46,7 @@ return {
 	},
 	{ -- "kevalin/mermaid.nvim",
 		"kevalin/mermaid.nvim",
+		ft = "markdown",
 		opts = {},
 	},
 }
