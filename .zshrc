@@ -90,7 +90,7 @@ plugins=(
     zoxide
     # ufw
     colored-man-pages
-    # battery
+    battery
     # git-lfs
     # python
     # tailscale
