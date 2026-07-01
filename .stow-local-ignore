@@ -22,6 +22,8 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
+.*\.bak
+
 kitty_customization.md
 nvim_customization.md
 ideas.md
