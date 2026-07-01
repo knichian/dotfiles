@@ -1,0 +1,39 @@
+nvidia-smi
+lsblk
+lspci
+lspci | grep vga
+lspci | grep VGA
+git
+c
+clear
+echo $SHELL
+nvidia-smi 
+bluetoothctl
+nvidia-smi
+htop
+top
+sudo top
+nvidia-smi
+nvcc -V
+dnf list brave
+man flatpak
+neofetch
+dnf install htop
+sudo dnf install htop
+ls
+dnf list vlc -v
+dnf list vlc --help
+dnf --help
+man dnf
+dnf info vlc
+dnf list vlc
+man dnf
+man dnf-search 
+dnf info vlc
+flatpak install flathub com.usebottles.bottles
+poweroff
+dnf list yad
+dnf list yad xdotool xwininfo
+sudo dnf install yad xdotool xwininfo
+dnf search vscode
+flatpak run com.discordapp.DiscordCanary --help

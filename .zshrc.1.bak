@@ -1,0 +1,45 @@
+export ZSH_CUSTOM_DIR="${HOME}/extra/zsh-custom"
+export ZSH_PLUGINS_DIR="${ZSH_CUSTOM_DIR}/plugins"
+export OMZ_DIR="${ZSH_PLUGINS_DIR}/omz"
+export OMZ_PLUGINS_DIR="${OMZ_DIR}/plugins"
+
+## Load Starship Prompt:
+eval "$(starship init zsh)"
+
+## Load zoxide:
+eval "$(zoxide init zsh)"
+
+## Load EnvVars:
+[ -f ${ZSH_CUSTOM_DIR}/envvar.zsh ] && source ${ZSH_CUSTOM_DIR}/envvar.zsh
+
+## Load-Aliases: (!)
+[ -f ${ZSH_CUSTOM_DIR}/aliases.zsh ] && source ${ZSH_CUSTOM_DIR}/aliases.zsh
+
+## Load Plugins:
+[ -f ${ZSH_CUSTOM_DIR}/load_plugins.zsh ] && source ${ZSH_CUSTOM_DIR}/load_plugins.zsh
+
+
+## Load Keymaps:
+bindkey -e
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+bindkey '^l' clear-screen
+bindkey '^ ' autosuggest-accept
+
+## Load-History:
+[ -f ${ZSH_CUSTOM_DIR}/history.zsh ] && export HISTFILE=${ZSH_CUSTOM_DIR}/history.zsh
+HISTSIZE=5000 
+SAVEHIST=${HISTSIZE}
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
