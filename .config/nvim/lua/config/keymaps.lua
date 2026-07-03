@@ -90,14 +90,17 @@ keymap("n", "<leader>wx", cmd("wq"), base_opts("Save current buffer & close curr
 keymap("n", "<leader>ws", "", base_opts("Window split operations"))
 keymap("n", "<leader>wsh", cmd("sp"), base_opts("Horizontal split window"))
 keymap("n", "<leader>wsv", cmd("vs"), base_opts("Vertical split window"))
-
-keymap("n", "<leader>w", "", base_opts(""))
-keymap("n", "<leader>wh", "<C-w>h", base_opts(""))
-keymap("n", "<leader>wj", "<C-w>j", base_opts(""))
-keymap("n", "<leader>wk", "<C-w>k", base_opts(""))
-keymap("n", "<leader>wl", "<C-w>l", base_opts(""))
-
 keymap("n", "<leader>wo", cmd("on"), base_opts("Maximize current window"))
+
+keymap("n", "<leader>w", "", base_opts())
+keymap("n", "<leader>wh", "<C-w>h", base_opts())
+keymap("n", "<leader>wj", "<C-w>j", base_opts())
+keymap("n", "<leader>wk", "<C-w>k", base_opts())
+keymap("n", "<leader>wl", "<C-w>l", base_opts())
+
+keymap("n", "<C-w>ws", "", base_opts("Window split operations"))
+keymap("n", "<C-w>wsh", cmd("sp"), base_opts("Horizontal split window"))
+keymap("n", "<C-w>wsv", cmd("vs"), base_opts("Vertical split window"))
 keymap("n", "<C-w>o", cmd("on"), base_opts("Maximize current window"))
 ---- Windows (end) ----
 
