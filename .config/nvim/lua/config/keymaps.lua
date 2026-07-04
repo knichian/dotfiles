@@ -81,7 +81,7 @@ keymap("n", "<leader>tn", cmd("tabnext"), base_opts("Cycle to next buffer"))
 keymap("n", "<leader>tp", cmd("tabprevious"), base_opts("Cycle to previous buffer"))
 ---- [ Tabs ] (end) ----
 
----- Windows (start) ----
+---- [ Windows ] (start) ----
 keymap("n", "<leader>w", "", base_opts("Window operations"))
 
 keymap("n", "<leader>wq", cmd("q"), base_opts("Quit current window"))
@@ -102,7 +102,11 @@ keymap("n", "<C-w>ws", "", base_opts("Window split operations"))
 keymap("n", "<C-w>wsh", cmd("sp"), base_opts("Horizontal split window"))
 keymap("n", "<C-w>wsv", cmd("vs"), base_opts("Vertical split window"))
 keymap("n", "<C-w>o", cmd("on"), base_opts("Maximize current window"))
----- Windows (end) ----
+---- [ Windows ] (end) ----
+
+---- [ Markdown ] (start) ----
+-- keymap("n", "<leader>mx", "<localleader>mx", base_opts())
+---- [ Markdown ] (end) ----
 
 ---- NVIM (start) ----
 keymap("n", "<leader>n", "", base_opts("Nvim operations"))
