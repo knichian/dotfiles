@@ -19,3 +19,5 @@ else
     alias ll='ls -lh --group-directories-first'
 fi
 
+alias zshconfig='nvim ~/.zshrc'
+
