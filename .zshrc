@@ -58,7 +58,7 @@ export ARCHFLAGS="-arch $(uname -m)"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # Knichian: aliases file
-[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases &
+[ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
 
 # Knichian: zoxide
 eval "$(zoxide init zsh)"
