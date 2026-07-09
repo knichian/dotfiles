@@ -10,13 +10,13 @@ which nvim > /dev/null && alias nv='nvim'
 alias conda_wake='source ~/miniconda3/bin/activate'
 
 if ( which lsd > /dev/null ); then
-    alias ls='lsd'
-    alias la='lsd --group-directories-first -lAh'
-    alias ll='lsd --group-directories-first -lh'
-    alias lt='lsd --group-directories-first --tree --depth=2'
+    alias ls='lsd --group-directories-first'
+    alias ll='ls  --long --human-readable'
+    alias la='ll --almost-all'
+    alias lt='la --tree --depth=2'
 else
-    alias la='ls -lAh --group-directories-first'
     alias ll='ls -lh --group-directories-first'
+    alias la='ls -lAh --group-directories-first'
 fi
 
 alias zshconfig='nvim ~/.zshrc'
