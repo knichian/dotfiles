@@ -1,13 +1,9 @@
 
+### Basic:
 alias c='clear'
-alias py='python3'
-alias pip='python3 -m pip'
-alias bpy='bpython'
-
-which ranger > /dev/null && alias ranger='. ranger'
-which nvim > /dev/null && alias nv='nvim'
-
-alias conda_wake='source ~/miniconda3/bin/activate'
+alias mv='mv -v'
+alias rm='rm -v'
+alias cp='cp -v'
 
 if ( which lsd > /dev/null ); then
     alias ls='lsd --group-directories-first'
@@ -19,5 +15,16 @@ else
     alias la='ls -lAh --group-directories-first'
 fi
 
+### Python:
+alias py='python3'
+alias pip='python3 -m pip'
+alias bpy='bpython'
+alias conda_wake='source ~/miniconda3/bin/activate'
+
+### Others:
+which ranger > /dev/null && alias ranger='. ranger'
+which nvim > /dev/null && alias nv='nvim'
+
+### Configuration:
 alias zshconfig='nvim ~/.zshrc'
 
