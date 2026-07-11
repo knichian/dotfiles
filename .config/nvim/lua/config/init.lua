@@ -1,6 +1,5 @@
 require('config.options_1')
 require('config.lazy')
 require('config.options_2')
--- require('config.options')
-require('config.keymaps')
 require('config.theme')
+require('config.keymaps')

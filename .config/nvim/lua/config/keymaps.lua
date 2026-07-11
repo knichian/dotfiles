@@ -1,4 +1,6 @@
+
 ---- Supporting-Functions (start) ----
+
 local keymap = vim.keymap.set
 
 local base_opts = function(description)
@@ -12,7 +14,9 @@ end
 local cmd = function(str)
 	return "<Cmd>" .. str .. "<CR>"
 end
+
 ---- Supporting-Functions (end) ----
+
 
 ---- Misc (start) ----
 keymap("", "<C-c>", "<Esc><Esc><Esc>", base_opts()) -- Remap CT
@@ -98,6 +102,7 @@ keymap("n", "<leader>wj", "<C-w>j", base_opts())
 keymap("n", "<leader>wk", "<C-w>k", base_opts())
 keymap("n", "<leader>wl", "<C-w>l", base_opts())
 
+keymap("n", "<C-w>w", "", base_opts("Window operations"))
 keymap("n", "<C-w>ws", "", base_opts("Window split operations"))
 keymap("n", "<C-w>wsh", cmd("sp"), base_opts("Horizontal split window"))
 keymap("n", "<C-w>wsv", cmd("vs"), base_opts("Vertical split window"))
@@ -114,6 +119,4 @@ keymap("n", "<leader>nl", "", base_opts("List operation"))
 keymap("n", "<leader>nlh", cmd("Telescope help_tags"), base_opts("Open help tags list"))
 keymap("n", "<leader>nlk", cmd("Telescope keymaps"), base_opts("Open keymaps list"))
 keymap("n", "<leader>nlb", cmd("Telescope buffers"), base_opts("Open buffer list"))
--- TODO: edit keymaps configuration
--- TODO: edit options configuration
 ---- NVIM (end) ----
