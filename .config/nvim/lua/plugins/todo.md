@@ -1,2 +1,5 @@
-- [x] catppuccin theme
-- [ ] folder navigation
+- [ ] add oil plugin
+- [ ] make hardtime work 
+- [ ] add snipets
+- [ ] add comform plugin 
+- [ ] add snipets for LaTeX
