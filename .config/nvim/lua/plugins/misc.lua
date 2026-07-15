@@ -105,11 +105,12 @@ return {
 	{ -- "m4xshen/hardtime.nvim",
 		"m4xshen/hardtime.nvim",
         enabled = false,
-		lazy = false,
-		dependencies = { "MunifTanjim/nui.nvim" },
+		lazy = true,
+		dependencies = {
+            "MunifTanjim/nui.nvim",
+        },
 		opts = {},
 	},
-
 	{ -- "tris203/precognition.nvim",
 		"tris203/precognition.nvim",
         enabled = false,
