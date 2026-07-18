@@ -61,12 +61,8 @@ keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("Format current buffer"
 
 ---- Files (start) ----
 keymap("n", "<leader>f", "", base_opts("File operations"))
-
-keymap("n", "<leader>fs", "", base_opts("File search operations"))
-keymap("n", "<leader>fsw", cmd("Telescope find_files"), base_opts("Search files"))
-keymap("n", "<leader>fsg", cmd("Telescope git_files"), base_opts("Search files on Git repo"))
-
-keymap("n", "<leader>fe", cmd("Lexplore 20"), base_opts("Toggle side-pane file manager"))
+keymap("n", "<leader>ff", cmd("Telescope find_files"), base_opts("Find file"))
+keymap("n", "<leader>fp", cmd("Lexplore 20"), base_opts("Toggle file browser side-pane"))
 ---- Files (end) ----
 
 ---- [ Buffers ] (start) ----
@@ -89,7 +85,7 @@ keymap("n", "<leader>tn", cmd("tabnext"), base_opts("Cycle to next buffer"))
 keymap("n", "<leader>tp", cmd("tabprevious"), base_opts("Cycle to previous buffer"))
 ---- [ Tabs ] (end) ----
 
----- [ windows ] (start) ----
+---- [ Windows ] (start) ----
 keymap("n", "<leader>w", "", base_opts("Window operations"))
 
 keymap("n", "<leader>wq", cmd("q"), base_opts("Quit current window"))
@@ -111,11 +107,17 @@ keymap("n", "<C-w>ws", "", base_opts("Window split operations"))
 keymap("n", "<C-w>wsh", cmd("sp"), base_opts("Horizontal split window"))
 keymap("n", "<C-w>wsv", cmd("vs"), base_opts("Vertical split window"))
 keymap("n", "<C-w>o", cmd("on"), base_opts("Maximize current window"))
----- [ windows ] (end) ----
+---- [ Windows ] (end) ----
 
 ---- [ Markdown ] (start) ----
--- keymap("n", "<leader>mx", "<localleader>mx", base_opts())
+keymap("n", "<leader>mx", "<localleader>mx", base_opts())
 ---- [ Markdown ] (end) ----
+
+---- [ Git ] (start) ---- 
+keymap("n", "<leader>g", "", base_opts("Git related"))
+keymap("n", "<leader>gp", cmd("Gitsigns preview_hunk"), base_opts("Git related"))
+keymap("n", "<leader>gs", cmd("Telescope git_files"), base_opts("Search files on Git repo"))
+---- [ Git ] (end) ---- 
 
 ---- NVIM (start) ----
 keymap("n", "<leader>n", "", base_opts("Nvim operations"))
