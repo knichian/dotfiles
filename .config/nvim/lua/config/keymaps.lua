@@ -59,11 +59,12 @@ keymap("n", "<leader>lr", vim.lsp.buf.rename, base_opts("Rename-symbol"))
 keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("Format current buffer"))
 ---- LSP-Maps (end) ----
 
----- Files (start) ----
+---- Find(search) (start) ----
 keymap("n", "<leader>f", "", base_opts("File operations"))
 keymap("n", "<leader>ff", cmd("Telescope find_files"), base_opts("Find file"))
 keymap("n", "<leader>fp", cmd("Lexplore 20"), base_opts("Toggle file browser side-pane"))
----- Files (end) ----
+---- Find(search) (end) ----
+keymap("n", "<leader>f", "", base_opts("File operations"))
 
 ---- [ Buffers ] (start) ----
 keymap("n", "<leader>b", "", base_opts("Buffer operations"))
@@ -116,7 +117,7 @@ keymap("n", "<leader>mx", "<localleader>mx", base_opts())
 ---- [ Git ] (start) ---- 
 keymap("n", "<leader>g", "", base_opts("Git related"))
 keymap("n", "<leader>gp", cmd("Gitsigns preview_hunk"), base_opts("Git related"))
-keymap("n", "<leader>gs", cmd("Telescope git_files"), base_opts("Search files on Git repo"))
+keymap("n", "<leader>gf", cmd("Telescope git_files"), base_opts("Search files on Git repo"))
 ---- [ Git ] (end) ---- 
 
 ---- NVIM (start) ----
