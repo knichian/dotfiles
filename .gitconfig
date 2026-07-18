@@ -1,0 +1,26 @@
+[include]
+    path = ~/.gitidentity
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+[alias]
+	quick = !git add . && git commit -m \"checkpoint[quicksave]\" 
+	shotgun = !git quick && git push
+
+	st = status
+    ft = fetch
+	co = checkout
+	br = branch
+	ci = commit
+    ps = push
+	qk = quick
+
+    qkps = !git qk && git ps
+
+[cola]
+	icontheme = default
+
