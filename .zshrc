@@ -70,11 +70,12 @@ EDITOR='/usr/bin/nvim'
 BASE_VENV_ACTIVATOR=~/python_envs/base/venv/bin/activate
 [ -f ${BASE_VENV_ACTIVATOR} ] && source ${BASE_VENV_ACTIVATOR}
 
-export NVM_DIR="${HOME}/.nvm"
-[ -s "${NVM_DIR}/nvm.sh" ] && source "${NVM_DIR}/nvm.sh" & # This loads nvm
+# export NVM_DIR="${HOME}/.nvm"
+# [ -s "${NVM_DIR}/nvm.sh" ] && source "${NVM_DIR}/nvm.sh" & # This loads nvm
 # [ -s "${NVM_DIR}/bash_completion" ] && source "${NVM_DIR}/bash_completion"  # This loads nvm bash_completion
 
 # Open shell buffer line buffer line in $EDITOR
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^x^e' edit-command-line
+
