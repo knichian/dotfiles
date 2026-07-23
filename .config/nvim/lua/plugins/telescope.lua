@@ -8,13 +8,5 @@ return {
 			build = "make",
 		},
 	},
-	opts = {
-		defaults = {
-			mappings = {
-				i = {
-					["<C-j>"] = "<CR>",
-				},
-			},
-		},
-	},
+	opts = {},
 }
