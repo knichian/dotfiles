@@ -23,8 +23,14 @@ alias conda_wake='source ~/miniconda3/bin/activate'
 
 ### Others:
 which ranger > /dev/null && alias ranger='. ranger'
+# which yazi > /dev/null && alias yazi='. yazi'
 which nvim > /dev/null && alias nv='nvim'
 
 ### Configuration:
 alias zshconfig='nvim ~/.zshrc'
 
+TERM_NAME=$(basename "/"$(ps -o cmd -f -p $(cat /proc/$(echo $$)/stat | cut -d \  -f 4) | tail -1 | sed 's/ .*$//'))
+
+if [[ $TERM_NAME = "kitty" ]]; then
+    alias icat='kitten icat --align left'
+fi

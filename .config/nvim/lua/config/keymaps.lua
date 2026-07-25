@@ -60,11 +60,14 @@ keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("Format current buffer"
 ---- LSP-Maps (end) ----
 
 ---- Find(search) (start) ----
-keymap("n", "<leader>f", "", base_opts("File operations"))
+keymap("n", "<leader>f", "", base_opts("Find (search)"))
 keymap("n", "<leader>ff", cmd("Telescope find_files"), base_opts("Find file"))
-keymap("n", "<leader>fp", cmd("Lexplore 20"), base_opts("Toggle file browser side-pane"))
 ---- Find(search) (end) ----
-keymap("n", "<leader>f", "", base_opts("File operations"))
+
+---- Explorer (start) ----
+keymap("n", "<leader>e", "", base_opts("File Explorer"))
+keymap("n", "<leader>ep", cmd("Lexplore 20"), base_opts("Toggle file browser side-pane"))
+---- Explorer (start) ----
 
 ---- [ Buffers ] (start) ----
 keymap("n", "<leader>b", "", base_opts("Buffer operations"))
