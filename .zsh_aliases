@@ -1,9 +1,12 @@
 
 ### Basic:
 alias c='clear'
+
 alias mv='mv -v'
 alias rm='rm -v'
 alias cp='cp -v'
+
+alias cd='cd && la'
 
 if ( which lsd > /dev/null ); then
     alias ls='lsd --group-directories-first'
@@ -31,6 +34,7 @@ alias zshconfig='nvim ~/.zshrc'
 
 TERM_NAME=$(basename "/"$(ps -o cmd -f -p $(cat /proc/$(echo $$)/stat | cut -d \  -f 4) | tail -1 | sed 's/ .*$//'))
 
-if [[ $TERM_NAME = "kitty" ]]; then
+if [[ $TERM_NAME = "kitty" ]] || [[ $TERM_NAME = "ghostty" ]]; then
     alias icat='kitten icat --align left'
 fi
+
