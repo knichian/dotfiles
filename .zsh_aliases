@@ -6,8 +6,6 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias cp='cp -v'
 
-alias cd='cd && la'
-
 if ( which lsd > /dev/null ); then
     alias ls='lsd --group-directories-first'
     alias ll='ls  --long --human-readable'
