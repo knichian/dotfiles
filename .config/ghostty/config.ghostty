@@ -1,6 +1,6 @@
+gtk-single-instance = false
 working-directory = home
 # window-inherit-working-directory = true
-gtk-single-instance = false
 maximize = true
 
 theme = catppuccin-mocha.conf
