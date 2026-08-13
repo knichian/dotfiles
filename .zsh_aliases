@@ -11,6 +11,10 @@ if ( which lsd > /dev/null ); then
     alias ll='ls  --long --human-readable'
     alias la='ll --almost-all'
     alias lt='la --tree --depth=2'
+    alias lta='la --tree'
+    alias lt1='la --tree --depth=1'
+    alias lt2='la --tree --depth=2'
+    alias lt3='la --tree --depth=3'
 else
     alias ll='ls -lh --group-directories-first'
     alias la='ls -lAh --group-directories-first'
