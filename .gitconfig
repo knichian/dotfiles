@@ -14,6 +14,7 @@
 	st = status
     ft = fetch
 	co = checkout
+    sw = switch
 	br = branch
 	ci = commit
     ps = push
@@ -24,3 +25,7 @@
 [cola]
 	icontheme = default
 
+[push]
+	recurseSubmodules = on-demand
+[submodule]
+	recurse = true

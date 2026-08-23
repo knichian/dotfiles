@@ -79,3 +79,6 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^x^e' edit-command-line
 
+
+# Added by cua-driver-rs installer — see https://github.com/trycua/cua
+export PATH="/home/knichian/.local/bin:$PATH"
