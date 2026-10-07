@@ -82,3 +82,6 @@ bindkey '^x^e' edit-command-line
 
 # Added by cua-driver-rs installer — see https://github.com/trycua/cua
 export PATH="/home/knichian/.local/bin:$PATH"
+
+# opencode
+export PATH=/home/knichian-rocketry/.opencode/bin:$PATH
