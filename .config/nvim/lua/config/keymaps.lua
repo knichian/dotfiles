@@ -15,6 +15,13 @@ local cmd = function(str)
 	return "<Cmd>" .. str .. "<CR>"
 end
 
+local format_buffer = function ()
+    require("conform").format({
+        async = true,
+        lsp_format = "fallback",
+    })
+end
+
 ---- Supporting-Functions (end) ----
 
 
@@ -56,7 +63,8 @@ keymap("n", "<leader>lls", cmd("Telescope lsp_workspace_symbols"), base_opts("Li
 
 keymap("n", "<leader>ld", cmd("Telescope diagnostics"), base_opts("Open telescope diagnostics"))
 keymap("n", "<leader>lr", vim.lsp.buf.rename, base_opts("Rename-symbol"))
-keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("Format current buffer"))
+-- keymap("n", "<leader>lbf", vim.lsp.buf.format, base_opts("Format current buffer"))
+keymap("n", "<leader>lbf", format_buffer, base_opts("Format current buffer"))
 ---- LSP-Maps (end) ----
 
 ---- Find(search) (start) ----
